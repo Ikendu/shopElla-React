@@ -4,7 +4,7 @@ import { items } from '../../features/CBody/items'
 const initialState = {
   products: items,
   sales: [],
-  total: 10,
+  total: 0,
   counter: 0,
   isOpen: false,
   isLoading: true,
@@ -36,10 +36,20 @@ const cartReducer = createSlice({
       let cartItem = state.sales.find((prod) => prod.id === payload)
       cartItem.count = cartItem.count - 1
     },
+    calculate: (state, { payload }) => {
+      let counts = 0
+      let total = 0
+      state.sales.map((item) => {
+        counts += item.count
+        total += item.price * item.count
+      })
+      state.counter = counts
+      state.total = total
+    },
   },
 })
 
-export const { openCart, closeCart, addItems, removeItem, increaseBtn, decreaseBtn } =
+export const { openCart, closeCart, addItems, removeItem, increaseBtn, decreaseBtn, calculate } =
   cartReducer.actions
 
 export default cartReducer.reducer

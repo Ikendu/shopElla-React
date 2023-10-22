@@ -39,7 +39,7 @@ const Card = () => {
                   <img src={image} alt={name} style={{ width: 70 }} />
                   <div className='details'>
                     <p>{name}</p>
-                    <p className='gapping'>N {price}</p>
+                    <p className='gapping'>N {price.toLocaleString()}</p>
                     <button onClick={() => dispatch(removeItem(id))}>remove</button>
                   </div>
                 </div>
@@ -61,7 +61,7 @@ const Card = () => {
           <p className='total-amount'>Total</p>
           <div className='checkout'>
             <div className='final'>Payment</div>
-            <div className='total'>{total}</div>
+            <div className='total'>N{total.toLocaleString()}</div>
             <div className='closeShopping' onClick={() => dispatch(closeCart())}>
               Minimize
             </div>
