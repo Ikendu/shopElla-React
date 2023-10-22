@@ -24,9 +24,13 @@ const cartReducer = createSlice({
       let selected = state.products.find((items) => items.id === payload)
       state.sales.push(selected)
     },
+    removeItem: (state, action) => {
+      let newItems = state.sales.filter((item) => item.id !== action.payload)
+      state.sales = newItems
+    },
   },
 })
 
-export const { openCart, closeCart, addItems } = cartReducer.actions
+export const { openCart, closeCart, addItems, removeItem } = cartReducer.actions
 
 export default cartReducer.reducer

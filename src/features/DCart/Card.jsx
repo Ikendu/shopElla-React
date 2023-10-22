@@ -2,11 +2,12 @@ import './card.css'
 import cart from '../../image/shopping.svg'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { closeCart, openCart } from '../../STORE/reducers/cartRedecer'
+import { closeCart, openCart, removeItem } from '../../STORE/reducers/cartRedecer'
 
 const Card = () => {
   const { total, counter, isOpen, sales } = useSelector((state) => state.cart)
   const dispatch = useDispatch()
+  let uniqueItem = [...new Set(sales)]
 
   return (
     <>
@@ -23,13 +24,24 @@ const Card = () => {
           </div>
           <div className='heading'>
             <p>Items</p>
-            <p>Price</p>
             <p>Quantity</p>
           </div>
           <div>
-            {sales.map((item) => (
-              <div key={item.id}>
-                <p>{item.name}</p>
+            {uniqueItem.map(({ name, image, id, price }) => (
+              <div className='cardGroup' key={id}>
+                <div className='listItems'>
+                  <img src={image} alt={name} style={{ width: 70 }} />
+                  <div className='details'>
+                    <p>{name}</p>
+                    <p className='gapping'>N {price}</p>
+                    <button onClick={() => dispatch(removeItem(id))}>remove</button>
+                  </div>
+                </div>
+                <div className='counter'>
+                  <button>+</button>
+                  <p>0</p>
+                  <button>-</button>
+                </div>
               </div>
             ))}
           </div>

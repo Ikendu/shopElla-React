@@ -31,9 +31,11 @@
   width: 500px;
   overflow-x: hidden;
   overflow-y: scroll;
+  max-height: 100%;
   z-index: 6;
   transition: 0.5s;
   color: antiquewhite;
+  right: 0;
 }
 
 .card-header {
@@ -47,7 +49,7 @@
 }
 .heading {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   text-align: center;
   font-size: 17px;
   padding-bottom: 20px;
@@ -75,4 +77,34 @@
 }
 .checkout div:last-child {
   background: #323d1a;
+}
+.listItems {
+  display: grid;
+  grid-template-columns: repeat(2, 3fr);
+  width: 60%;
+  padding: 0 0 20px 20px;
+}
+.listItems img {
+  border-radius: 5px;
+}
+.details {
+  margin-left: -40px;
+}
+.gapping {
+  padding: 3px;
+}
+.cardGroup {
+  display: flex;
+}
+.cardGroup .counter {
+  margin-left: 60px;
+}
+.counter p {
+  margin-left: 6px;
+}
+button {
+  background-color: #28330f;
+  color: #ced6d8;
+  border-radius: 5px;
+  font-size: 14px;
 }
