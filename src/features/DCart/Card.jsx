@@ -2,7 +2,13 @@ import './card.css'
 import cart from '../../image/shopping.svg'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { closeCart, openCart, removeItem } from '../../STORE/reducers/cartRedecer'
+import {
+  closeCart,
+  decreaseBtn,
+  increaseBtn,
+  openCart,
+  removeItem,
+} from '../../STORE/reducers/cartRedecer'
 
 const Card = () => {
   const { total, counter, isOpen, sales } = useSelector((state) => state.cart)
@@ -27,7 +33,7 @@ const Card = () => {
             <p>Quantity</p>
           </div>
           <div>
-            {uniqueItem.map(({ name, image, id, price }) => (
+            {uniqueItem.map(({ name, image, id, price, count }) => (
               <div className='cardGroup' key={id}>
                 <div className='listItems'>
                   <img src={image} alt={name} style={{ width: 70 }} />
@@ -38,9 +44,16 @@ const Card = () => {
                   </div>
                 </div>
                 <div className='counter'>
-                  <button>+</button>
-                  <p>0</p>
-                  <button>-</button>
+                  <button onClick={() => dispatch(increaseBtn(id))}>+</button>
+                  <p>{count}</p>
+                  <button
+                    onClick={() => {
+                      if (count == 1) dispatch(removeItem(id))
+                      else dispatch(decreaseBtn(id))
+                    }}
+                  >
+                    -
+                  </button>
                 </div>
               </div>
             ))}
