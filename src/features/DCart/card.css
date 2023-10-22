@@ -1,0 +1,78 @@
+.shopping {
+  position: fixed;
+  text-align: center;
+  right: 5%;
+  top: 75px;
+  z-index: 5;
+  cursor: pointer;
+}
+.shopping img {
+  width: 60px;
+}
+.shopping span {
+  position: absolute;
+  top: -5;
+  background-color: rgb(116, 17, 17);
+  border-radius: 40%;
+  padding: 3px 6px;
+  left: 75%;
+  color: white;
+}
+.shopping p {
+  background-color: rgb(133, 16, 16);
+  color: #ced6d8;
+  border-radius: 8px;
+  padding-bottom: 4px;
+  margin-top: -10px;
+}
+.card-shopping {
+  position: fixed;
+  background: #1d110c;
+  width: 500px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 6;
+  transition: 0.5s;
+  color: antiquewhite;
+}
+
+.card-header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  padding: 20px 0 20px 0;
+  border-bottom: 2px solid #7b9147;
+  border-radius: 20%;
+  margin-bottom: 30px;
+}
+.heading {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  font-size: 17px;
+  padding-bottom: 20px;
+}
+.total-amount {
+  text-align: center;
+  letter-spacing: 3px;
+}
+.checkout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  cursor: pointer;
+  margin: 0;
+}
+.checkout div {
+  height: 50px;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+  padding-top: 10px;
+}
+.checkout div:nth-child(1) {
+  background: #112b5e;
+  color: #fff;
+}
+.checkout div:last-child {
+  background: #323d1a;
+}
