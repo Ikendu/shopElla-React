@@ -1,0 +1,44 @@
+.container {
+  width: 100%;
+  margin: auto;
+  transition: 0.5s;
+}
+header {
+  display: grid;
+  grid-template-columns: ifr, 50px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-top: 10px;
+}
+.list .item {
+  text-align: center;
+  background: #ced6d8;
+  padding: 20px;
+  box-shadow: 0 50px 50px #7a7c7c;
+  letter-spacing: 1px;
+}
+.list .item img {
+  width: 90%;
+  border-radius: 10px;
+}
+.list .item .title {
+  font-weight: 600;
+  font-size: 20px;
+}
+.list .item button {
+  width: 90%;
+  padding: 12px;
+  background: #470202;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+button:active,
+button:focus {
+  border-color: rgb(185, 8, 141);
+}
