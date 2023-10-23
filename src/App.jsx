@@ -7,6 +7,7 @@ import Payment from './features/EPayment/Payment'
 
 const App = () => {
   const { sales } = useSelector((state) => state.cart)
+  const { isOpen } = useSelector((state) => state.modal)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(calculate())
@@ -14,7 +15,7 @@ const App = () => {
   return (
     <>
       <div>
-        <Payment />
+        {isOpen && <Payment />}
         <Card />
         <Products />
       </div>

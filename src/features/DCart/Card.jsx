@@ -9,6 +9,7 @@ import {
   openCart,
   removeItem,
 } from '../../STORE/reducers/cartRedecer'
+import { openModel } from '../../STORE/reducers/modalReducer'
 
 const Card = () => {
   const { total, counter, isOpen, sales } = useSelector((state) => state.cart)
@@ -60,7 +61,9 @@ const Card = () => {
           </div>
           <p className='total-amount'>Total</p>
           <div className='checkout'>
-            <div className='final'>Payment</div>
+            <div className='final' onClick={() => dispatch(openModel())}>
+              Pay here
+            </div>
             <div className='total'>N{total.toLocaleString()}</div>
             <div className='closeShopping' onClick={() => dispatch(closeCart())}>
               Minimize
