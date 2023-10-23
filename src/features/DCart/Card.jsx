@@ -14,7 +14,6 @@ import { openModel } from '../../STORE/reducers/modalReducer'
 const Card = () => {
   const { total, counter, isOpen, sales } = useSelector((state) => state.cart)
   const dispatch = useDispatch()
-  let uniqueItem = [...new Set(sales)]
 
   return (
     <>
@@ -34,7 +33,7 @@ const Card = () => {
             <p>Quantity</p>
           </div>
           <div>
-            {uniqueItem.map(({ name, image, id, price, count }) => (
+            {sales.map(({ name, image, id, price, count }) => (
               <div className='cardGroup' key={id}>
                 <div className='listItems'>
                   <img src={image} alt={name} style={{ width: 70 }} />

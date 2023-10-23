@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: scroll;
 }
 .modal {
   background: #fff;
@@ -27,7 +28,27 @@
 }
 .each-details {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   padding: 5px;
   padding-right: 10px;
+}
+.name-item {
+  margin: 0 -50px 0 -10px;
+}
+.price-item {
+  margin-right: -80px;
+}
+.count-item {
+  margin-right: -30px;
+}
+.price {
+  padding: 20px 0 20px 0;
+  border-bottom: 4px solid blue;
+}
+.account {
+  padding: 20px 0 20px 0;
+}
+.modal button {
+  padding: 10px;
+  cursor: pointer;
 }

@@ -9,9 +9,11 @@ const App = () => {
   const { sales } = useSelector((state) => state.cart)
   const { isOpen } = useSelector((state) => state.modal)
   const dispatch = useDispatch()
+
   useEffect(() => {
     dispatch(calculate())
   }, [sales])
+
   return (
     <>
       <div>

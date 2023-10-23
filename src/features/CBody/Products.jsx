@@ -31,7 +31,7 @@ const Display = ({ image, name, price, id }) => {
       <img src={image} alt={name} />
       <p className='title'>{name}</p>
       <p>N {price.toLocaleString()}</p>
-      <button onClick={() => dispatch(addItems(id))}>Add to Cart</button>
+      <button onClick={() => dispatch(addItems({ id }))}>Add to Cart</button>
     </div>
   )
 }

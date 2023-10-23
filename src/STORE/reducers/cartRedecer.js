@@ -17,26 +17,35 @@ const cartReducer = createSlice({
     openCart: (state) => {
       state.isOpen = true
     },
+
     closeCart: (state) => {
       state.isOpen = false
     },
+
     addItems: (state, { payload }) => {
-      let selected = state.products.find((items) => items.id === payload)
-      state.sales.push(selected)
+      let index = state.sales.findIndex((items) => items.id === payload.id)
+      if (index == -1) {
+        let selected = state.products.find((item) => item.id === payload.id)
+        state.sales.push(selected)
+      }
     },
+
     removeItem: (state, action) => {
       let newItems = state.sales.filter((item) => item.id !== action.payload)
       state.sales = newItems
     },
+
     increaseBtn: (state, { payload }) => {
       let cartItem = state.sales.find((prod) => prod.id === payload)
       cartItem.count = cartItem.count + 1
     },
+
     decreaseBtn: (state, { payload }) => {
       let cartItem = state.sales.find((prod) => prod.id === payload)
       cartItem.count = cartItem.count - 1
     },
-    calculate: (state, { payload }) => {
+
+    calculate: (state) => {
       let counts = 0
       let total = 0
       state.sales.map((item) => {
