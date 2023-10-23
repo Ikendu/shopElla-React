@@ -6,17 +6,17 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   z-index: 10;
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   overflow-y: scroll;
 }
 .modal {
-  background: #fff;
-  width: 80vw;
-  max-width: 400px;
+  background: #e2dcdc;
+  width: 100vw;
+  max-width: 500px;
   padding: 2rem 1rem;
-  text-align: center;
+  text-align: justify;
   border-radius: 10px;
 }
 .modal h2 {
@@ -26,29 +26,23 @@
 .summary {
   padding-top: 20px;
 }
-.each-details {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 5px;
-  padding-right: 10px;
-}
-.name-item {
-  margin: 0 -50px 0 -10px;
-}
-.price-item {
-  margin-right: -80px;
-}
-.count-item {
-  margin-right: -30px;
+.table {
+  width: 100%;
+  background-color: #d2dff3;
 }
 .price {
+  text-align: center;
   padding: 20px 0 20px 0;
   border-bottom: 4px solid blue;
 }
 .account {
   padding: 20px 0 20px 0;
+  color: rgb(7, 7, 43);
+  text-align: center;
+  background-color: #c1cee0;
 }
 .modal button {
   padding: 10px;
   cursor: pointer;
+  margin: 8px 0 0 35%;
 }
