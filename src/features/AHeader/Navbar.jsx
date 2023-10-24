@@ -1,12 +1,13 @@
 import './header.css'
 
-import shopIcon from '../ICON/shopIcon2.jpg'
+import shopIcon from '../ICON/shopIcon3.jpg'
 const Navbar = () => {
   return (
     <header className='top'>
       <div className='logo'>
         <a href='#'>
           <img src={shopIcon} className='icon' alt='logo' />
+          <p className='name'>Lifella</p>
         </a>
       </div>
       <nav className='content' id='content'>
