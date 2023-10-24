@@ -1,5 +1,4 @@
 import './card.css'
-import cart from '../../image/shopping.svg'
 import { CartIcon } from '../ICON/CartIcon'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
@@ -19,7 +18,7 @@ const Card = () => {
   return (
     <>
       <div className='shopping' onClick={() => dispatch(openCart())}>
-        <img src={CartIcon} alt='shopping' />
+        <CartIcon />
         <span>{counter}</span>
         <p>Open</p>
       </div>
