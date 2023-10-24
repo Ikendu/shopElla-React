@@ -1,13 +1,16 @@
 .container {
   width: 100%;
-  margin: auto;
   transition: 0.5s;
 }
-header {
-  display: grid;
-  grid-template-columns: ifr, 50px;
+.heading-product h2 {
+  font-weight: bold;
+  font-size: 35px;
+  padding: 20px;
+  padding-top: 50px;
+  text-align: center;
+  width: 100%;
+  color: #29099e;
 }
-
 .list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -12,9 +12,9 @@ const Products = () => {
 
   return (
     <div className='container'>
-      <header>
-        <h2>Products on sale</h2>
-      </header>
+      <div className='heading-product'>
+        <h2>Current Products on Sale</h2>
+      </div>
       <section className='list'>
         {products.map((items) => (
           <Display {...items} key={items.id} />

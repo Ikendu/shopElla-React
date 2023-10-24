@@ -6,6 +6,7 @@ import { calculate } from './STORE/reducers/cartRedecer'
 import Payment from './features/EPayment/Payment'
 import Navbar from './features/AHeader/Navbar'
 import FrontPage from './features/AHeader/FrontPage'
+import Footer from './features/ZFooter/Footer'
 
 const App = () => {
   const { sales } = useSelector((state) => state.cart)
@@ -25,6 +26,7 @@ const App = () => {
         <Card />
         <Products />
       </div>
+      <Footer />
     </>
   )
 }

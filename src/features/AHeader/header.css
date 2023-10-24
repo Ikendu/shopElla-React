@@ -76,10 +76,10 @@ main img {
 
 main h1 {
   font-size: 130px;
-  margin: 40px 50px 40px 170px;
+  margin: 40px 0 40px 70px;
   color: #a30781;
   position: relative;
-  right: -10%;
+  right: -20%;
   z-index: 1;
 }
 main .write {

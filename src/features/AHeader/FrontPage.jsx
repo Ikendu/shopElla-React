@@ -5,7 +5,7 @@ const FrontPage = () => {
     <main>
       <div className='trans'></div>
       <div className='front-page'>
-        <h1 className='glamore'>Glamour fit</h1>
+        <h1 className='glamore'>Glamour feel</h1>
         <div className='write'>
           <p className='head-write'>Tell us your budget and we give you the best for it </p>
           <p className='more-write'>
