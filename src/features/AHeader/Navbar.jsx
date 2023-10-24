@@ -1,6 +1,6 @@
 import './header.css'
 
-import shopIcon from '../ICON/shopIcon.jpg'
+import shopIcon from '../ICON/shopIcon2.jpg'
 const Navbar = () => {
   return (
     <header className='top'>
@@ -28,7 +28,6 @@ const Navbar = () => {
           </a>
         </ul>
       </nav>
-      <i className='fa-solid fa-bars' onclick="showBar('bar')"></i>
     </header>
   )
 }

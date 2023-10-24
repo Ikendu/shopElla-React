@@ -6,8 +6,8 @@
 
 .top {
   width: 100%;
-  height: 12vh;
-  background-color: #030b18;
+  height: 10vh;
+  background-color: #e9e7f3;
   display: flex;
   align-items: center;
   position: fixed;
@@ -21,7 +21,7 @@
   left: 0;
 }
 .icon {
-  border-radius: 30%;
+  border-radius: 50%;
   width: 45px;
   height: 50px;
 }
@@ -39,6 +39,7 @@ nav ul {
   position: absolute;
   right: 30px;
   top: 18px;
+  border-radius: 12px;
 }
 nav ul li {
   font-size: 14px;
@@ -50,4 +51,53 @@ nav ul li:hover {
   color: #77f480;
   border-top: 2px solid #e5030d;
   border-bottom: 2px solid #e5030d;
+  border-radius: 12px;
+}
+
+main {
+  height: 90vh;
+  background-color: #e9e7f3;
+  display: flex;
+  margin-top: 60px;
+  width: 100%;
+}
+
+main img {
+  width: 500px;
+  height: 90vh;
+  border-radius: 0 0 150px 150px;
+}
+
+main h1 {
+  font-size: 130px;
+  margin: 40px 50px 40px 170px;
+  color: #265564;
+  position: relative;
+  right: -10%;
+  z-index: 1;
+}
+
+main p {
+  margin: 50px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 30px;
+  color: #2f4949;
+  padding: 40px;
+  z-index: -10;
+  border-top: 2px solid #e5030d;
+  border-bottom: 2px solid #e5030d;
+  border-radius: 20px;
+}
+p button {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 15px;
+  background-color: #35838a;
+}
+a {
+  text-decoration: none;
 }

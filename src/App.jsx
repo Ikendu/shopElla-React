@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { calculate } from './STORE/reducers/cartRedecer'
 import Payment from './features/EPayment/Payment'
 import Navbar from './features/AHeader/Navbar'
+import FrontPage from './features/AHeader/FrontPage'
 
 const App = () => {
   const { sales } = useSelector((state) => state.cart)
@@ -19,6 +20,7 @@ const App = () => {
     <>
       <div>
         <Navbar />
+        <FrontPage />
         {isOpen && <Payment />}
         <Card />
         <Products />
