@@ -12,7 +12,7 @@ const Payment = () => {
         <h2>Your Purchase Details</h2>
         <div className='summary'>
           <table className='table'>
-            <caption>Preview Your Purchase Details</caption>
+            <caption className='preview'>Preview Selection</caption>
             <tr>
               <th>Modal</th>
               <th>Price</th>
@@ -41,8 +41,8 @@ const Payment = () => {
         </div>
 
         <p>
-          After payment send prove of payment to 08023613691 through Whatsap for comfirmation and
-          subsequent packaging of your items
+          After payment send prove of payment and Preview Selection to 08023613691 through Whatsap
+          for comfirmation and subsequent packaging of your items
         </p>
         <p>email: ellagift25@gmail.com</p>
         <h3>Thank you for your patronage we look forward to seeing you again</h3>
