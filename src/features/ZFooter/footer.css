@@ -1,0 +1,43 @@
+.content-read {
+  margin-top: 50px;
+  background-color: #01033f;
+  padding: 30px;
+  border-radius: 20px 20px 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.content-read h3 {
+  color: rgb(218, 152, 152);
+}
+.about-us,
+.contact-us {
+  margin: 20px;
+  line-height: 30px;
+  color: #8f8f93;
+}
+.about-us p,
+.contact-us p {
+  text-align: justify;
+  padding: 10px;
+}
+footer {
+  background-color: #0a0c47;
+  color: #8f8f93;
+  text-align: center;
+  border-top: 1px solid #7c7c7e;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 14px;
+}
+footer p {
+  padding: 20px;
+}
+footer .developer {
+  color: #9d8d9c;
+}
+footer .developer .devnum {
+  color: #8dbe9d !important;
+}
+footer .developer .devreg {
+  display: block;
+}
