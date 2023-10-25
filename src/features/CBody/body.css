@@ -41,6 +41,10 @@
   font-size: 14px;
   letter-spacing: 2px;
 }
+.item button:hover {
+  color: #77f480;
+  border-radius: 16px;
+}
 button:active,
 button:focus {
   border-color: rgb(185, 8, 141);

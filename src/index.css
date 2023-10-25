@@ -9,3 +9,9 @@ body {
   background: #e3e7e8;
   font-family: system-ui;
 }
+button:hover {
+  color: #77f480;
+  border-top: 2px solid #e5030d;
+  border-bottom: 2px solid #e5030d;
+  border-radius: 16px;
+}

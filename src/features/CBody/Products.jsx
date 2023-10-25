@@ -12,7 +12,7 @@ const Products = () => {
 
   return (
     <div className='container'>
-      <div className='heading-product'>
+      <div className='heading-product' id='products'>
         <h2>Current Products on Sale</h2>
       </div>
       <section className='list'>
@@ -31,7 +31,9 @@ const Display = ({ image, name, price, id }) => {
       <img src={image} alt={name} />
       <p className='title'>{name}</p>
       <p>N {price.toLocaleString()}</p>
-      <button onClick={() => dispatch(addItems({ id }))}>Add to Cart</button>
+      <button onClick={() => dispatch(addItems({ id }))}>
+        <span>Add to Cart</span>
+      </button>
     </div>
   )
 }

@@ -20,6 +20,14 @@
   text-align: justify;
   padding: 10px;
 }
+.content-read button {
+  color: #f6f7f6;
+  border-top: 2px solid #1b7af7;
+  border-bottom: 2px solid #1b7af7;
+  border-radius: 16px;
+  padding-left: 10px;
+}
+
 footer {
   background-color: #0a0c47;
   color: #8f8f93;
@@ -32,6 +40,7 @@ footer {
 footer p {
   padding: 20px;
 }
+
 footer .developer {
   color: #9d8d9c;
 }
@@ -40,4 +49,20 @@ footer .developer .devnum {
 }
 footer .developer .devreg {
   display: block;
+}
+.social {
+  margin-bottom: -50px;
+  margin-top: 20px;
+  margin-left: 45%;
+}
+.follow {
+  text-align: center;
+  margin: 30px 0 -30px 0;
+  font-size: 20px;
+}
+.last-social {
+  padding-top: 20px;
+}
+.last-social a {
+  padding-right: 20px;
 }

@@ -1,4 +1,5 @@
 import './footer.css'
+import { Facebook, Instagram, Whatsapp } from '../ICON/CartIcon'
 import { Suspense, lazy, useState } from 'react'
 const SuspenseAbout = lazy(() => import('./AboutUs'))
 const SuspenseContact = lazy(() => import('./ContactUs'))
@@ -8,19 +9,34 @@ const Footer = () => {
   const [showContact, setShowContact] = useState(false)
   return (
     <>
+      <p className='follow'>
+        You are Welcome to follow us on social media plateforms and be the first to get our latest
+        updates
+      </p>
+      <div className='last-social social' id='social'>
+        <a href='https://web.facebook.com/Gift.Onyinyechi101' target='_blank' rel='noreferrer'>
+          <Facebook />
+        </a>
+        <a href='https://wa.me/+2348023613691' target='_blank' rel='noreferrer'>
+          <Whatsapp />
+        </a>
+        <a href='https://instagram.com/Onitsha_price_hair_store' target='_blank' rel='noreferrer'>
+          <Instagram />
+        </a>
+      </div>
       <section className='content-read'>
         <div className='about-us' id='about-us'>
           <h3>About Us</h3>
           <p>
             Welcome to Lifella Hairs Website! We are a dedicated team passionate about providing
-            high-quality imported human hairs and blended wigs to our customers nationwide.
+            high-quality imported human hairs and blended wigs to our customers nationwide...
           </p>
           <Suspense fallback={<h3>Loading more About us...</h3>}>
             {show && <SuspenseAbout />}
           </Suspense>
 
           <button onClick={show ? () => setShow(false) : () => setShow(true)}>
-            {show ? `Less` : `More`}
+            {show ? `Less` : `More...`}
           </button>
         </div>
         <div className='contact-us' id='contact-us'>
@@ -28,27 +44,27 @@ const Footer = () => {
           <p>
             Thank you for your interest in our hair product. We value your feedback, inquiries, and
             suggestions. Please feel free to reach out to us using the following contact
-            information:
+            information...
           </p>
           <Suspense fallback={<h3>Loading...</h3>}>{showContact && <SuspenseContact />}</Suspense>
 
           <button onClick={showContact ? () => setShowContact(false) : () => setShowContact(true)}>
-            {showContact ? `Less` : `More`}
+            {showContact ? `Less` : `More...`}
           </button>
         </div>
       </section>
       <footer>
         <p>Copyright 2023 © Lifella hair Importers. All rights reserved</p>
         <div className='last-social'>
-          {/* <a href='https://web.facebook.com/Gift.Onyinyechi101' target='_blank'>
-            <i className='fa-brands fa-facebook' style='color: #367277;'></i>
+          <a href='https://web.facebook.com/Gift.Onyinyechi101' target='_blank' rel='noreferrer'>
+            <Facebook />
           </a>
-          <a href='https://wa.me/+2348023613691' target='_blank'>
-            <i className='fa-brands fa-whatsapp' style='color: #367277;'></i>
+          <a href='https://wa.me/+2348023613691' target='_blank' rel='noreferrer'>
+            <Whatsapp />
           </a>
-          <a href='https://instagram.com/Onitsha_price_hair_store' target='_blank'>
-            <i class='fa-brands fa-instagram' style='color: #367277;'></i> 
-           </a> */}
+          <a href='https://instagram.com/Onitsha_price_hair_store' target='_blank' rel='noreferrer'>
+            <Instagram />
+          </a>
         </div>
         <p>Privacy Policies</p>
         <p className='developer'>

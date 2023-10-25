@@ -1,6 +1,7 @@
 import './header.css'
 
 import shopIcon from '../ICON/shopIcon3.jpg'
+
 const Navbar = () => {
   return (
     <header className='top'>
