@@ -28,12 +28,13 @@
 }
 .card-shopping {
   position: fixed;
+  top: 0;
   background: #1d110c;
   width: 500px;
   overflow-x: hidden;
   overflow-y: scroll;
   max-height: 100%;
-  z-index: 6;
+  z-index: 11;
   transition: 0.5s;
   color: antiquewhite;
   right: 0;
