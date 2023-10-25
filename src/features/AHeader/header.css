@@ -22,7 +22,7 @@
 .name {
   font-size: 35px;
   font-weight: bold;
-  color: #520808;
+  color: #403de2;
   margin: -8px;
   margin-top: 0px;
 }
@@ -77,14 +77,14 @@ main img {
 main h1 {
   font-size: 130px;
   margin: 40px 0 40px 70px;
-  color: #a30781;
+  color: #403de2;
   position: relative;
   right: -20%;
   z-index: 1;
 }
 main .write {
-  border-top: 2px solid #ad037a;
-  border-bottom: 4px solid #9e0578;
+  border-top: 2px solid #403de2;
+  border-bottom: 4px solid #403de2;
   border-radius: 20px;
   padding: 5px;
   margin: 60px;

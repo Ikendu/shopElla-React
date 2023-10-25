@@ -19,7 +19,7 @@ const cartReducer = createSlice({
     },
 
     closeCart: (state) => {
-      state.isOpen = false
+      state.isOpen = true
     },
 
     addItems: (state, { payload }) => {
