@@ -36,6 +36,17 @@
   display: flex;
   margin: 5px;
 }
+
+@media screen and (max-width: 600px) {
+  .icon {
+    height: 30px;
+    width: 30px;
+  }
+  .name {
+    font-size: 25px;
+  }
+}
+
 nav ul {
   display: flex;
   justify-content: space-evenly;
@@ -60,6 +71,16 @@ nav ul li:hover {
   border-radius: 12px;
 }
 
+@media screen and (max-width: 900px) {
+  nav ul {
+    display: none;
+  }
+  #content ul {
+    display: none;
+    right: 0;
+    top: 58px;
+  }
+}
 main {
   height: 90vh;
   background-color: #d8dde0;
