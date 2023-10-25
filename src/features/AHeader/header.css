@@ -138,3 +138,51 @@ p button {
 a {
   text-decoration: none;
 }
+@media screen and (max-width: 700px) {
+  main {
+    width: 100%;
+    height: 600px;
+  }
+  main h1 {
+    font-size: 40px;
+    right: -10px;
+    color: #051520;
+    background-color: transparent;
+    margin-left: 3px;
+    padding: 5px;
+    padding-top: 30px;
+  }
+  main p {
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+    margin: 20px;
+    margin-top: -40px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .front-page {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    width: 320px;
+    z-index: 3;
+  }
+  .trans {
+    width: 320px;
+    height: 400px;
+    background-color: white;
+    opacity: 0.5;
+    border-radius: 30px;
+    z-index: 2;
+    position: absolute;
+    top: 120px;
+    left: 50px;
+  }
+  main img {
+    z-index: 1;
+    height: 550px;
+    border-radius: 0 0 50px 50px;
+  }
+}
