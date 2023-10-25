@@ -3,7 +3,6 @@ import './body.css'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { addItems } from '../../STORE/reducers/cartRedecer'
-import { useState } from 'react'
 
 const Products = () => {
   const { products } = useSelector((state) => state.cart)
@@ -23,27 +22,15 @@ const Products = () => {
 }
 
 const Display = ({ image, name, price, id }) => {
-  let [count, setCount] = useState(0)
   const dispatch = useDispatch()
-
-  const plusCount = () => {
-    setCount(count + 1)
-  }
 
   return (
     <div className='item' key={id}>
       <img src={image} alt={name} />
       <p className='title'>{name}</p>
       <p>N {price.toLocaleString()}</p>
-      <button
-        onClick={
-          (plusCount(),
-          () => {
-            return dispatch(addItems({ id }))
-          })
-        }
-      >
-        <span>{count < 1 ? `Add to Cart` : count}</span>
+      <button onClick={() => dispatch(addItems({ id }))}>
+        <span>Add to Cart</span>
       </button>
     </div>
   )
