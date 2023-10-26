@@ -114,8 +114,3 @@ button {
   border-radius: 5px;
   font-size: 14px;
 }
-@media screen and (max-width: 600px) {
-  .shopping {
-    right: 12%;
-  }
-}

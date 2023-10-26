@@ -63,5 +63,6 @@ button:focus {
   }
   .heading-product h2 {
     padding-top: 10px;
+    font-size: 27px;
   }
 }
