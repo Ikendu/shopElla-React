@@ -24,7 +24,7 @@
   color: #f6f7f6;
   border-top: 2px solid #1b7af7;
   border-bottom: 2px solid #1b7af7;
-  border-radius: 16px;
+  border-radius: 10px;
   padding-left: 10px;
 }
 
@@ -65,4 +65,27 @@ footer .developer .devreg {
 }
 .last-social a {
   padding-right: 20px;
+}
+@media screen and (max-width: 600px) {
+  .content-read {
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-us,
+  .contact-us {
+    line-height: 25px;
+  }
+  footer {
+    border-top: 1px solid #7c7c7e;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 10px;
+  }
+  footer p {
+    padding: 5px;
+  }
+  .last-social {
+    display: none;
+  }
 }
