@@ -51,9 +51,12 @@ footer .developer .devreg {
   display: block;
 }
 .social {
-  margin-bottom: -50px;
-  margin-top: 20px;
+  margin-bottom: -40px;
+  margin-top: 40px;
   margin-left: 45%;
+}
+.social a {
+  padding: 20px;
 }
 .follow {
   text-align: center;
@@ -94,7 +97,6 @@ footer .developer .devreg {
   footer p {
     padding: 5px;
   }
-
   .last-social {
     display: none;
   }
