@@ -1,5 +1,12 @@
 import './footer.css'
-import { Facebook, Instagram, Whatsapp } from '../ICON/CartIcon'
+import {
+  Facebook,
+  FacebookPale,
+  Instagram,
+  InstagramPale,
+  Whatsapp,
+  WhatsappPale,
+} from '../ICON/CartIcon'
 import { Suspense, lazy, useState } from 'react'
 const SuspenseAbout = lazy(() => import('./AboutUs'))
 const SuspenseContact = lazy(() => import('./ContactUs'))
@@ -13,7 +20,7 @@ const Footer = () => {
         You are Welcome to follow us on social media plateforms and be the first to get our latest
         updates
       </p>
-      <div className='last-social social' id='social'>
+      <div className='social' id='social'>
         <a href='https://web.facebook.com/Gift.Onyinyechi101' target='_blank' rel='noreferrer'>
           <Facebook />
         </a>
@@ -57,13 +64,13 @@ const Footer = () => {
         <p>Copyright 2023 © Lifella hair Importers. All rights reserved</p>
         <div className='last-social'>
           <a href='https://web.facebook.com/Gift.Onyinyechi101' target='_blank' rel='noreferrer'>
-            <Facebook />
+            <FacebookPale />
           </a>
           <a href='https://wa.me/+2348023613691' target='_blank' rel='noreferrer'>
-            <Whatsapp />
+            <WhatsappPale />
           </a>
           <a href='https://instagram.com/Onitsha_price_hair_store' target='_blank' rel='noreferrer'>
-            <Instagram />
+            <InstagramPale />
           </a>
         </div>
         <p>Privacy Policies</p>
