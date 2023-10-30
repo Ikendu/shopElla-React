@@ -212,8 +212,14 @@ a {
     top: 90px;
     left: 12px;
   }
+  main img {
+    height: 70vh;
+  }
+  main {
+    height: 70vh;
+  }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 400px) {
   main h1 {
     margin-left: -60px;
   }
