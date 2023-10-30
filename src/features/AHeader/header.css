@@ -213,3 +213,17 @@ a {
     left: 12px;
   }
 }
+@media screen and (max-width: 390px) {
+  main h1 {
+    margin-left: -60px;
+  }
+  main .write {
+    margin-left: -30px;
+    width: 300px;
+  }
+
+  .trans {
+    width: 305px;
+    left: 18px;
+  }
+}
