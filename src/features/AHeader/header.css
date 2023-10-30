@@ -210,26 +210,48 @@ a {
 
   .trans {
     top: 90px;
-    left: 12px;
+    left: 20px;
   }
   main img {
-    height: 70vh;
+    height: 60vh;
   }
   main {
-    height: 70vh;
+    height: 60vh;
   }
 }
 @media screen and (max-width: 400px) {
   main h1 {
-    margin-left: -60px;
+    margin-left: -80px;
+    margin-top: 90px;
   }
   main .write {
-    margin-left: -30px;
+    margin-left: -35px;
     width: 300px;
   }
 
   .trans {
+    top: 80px;
     width: 305px;
-    left: 18px;
+    left: 15px;
+    height: 410px;
+  }
+  main img {
+    height: 85vh;
+  }
+  main {
+    height: 85vh;
+    margin-bottom: 20px;
+  }
+  main .more-write {
+    color: rgb(26, 24, 24);
+    font-size: 14px;
+  }
+  main .head-write {
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 20px;
+  }
+  main .write {
+    margin-top: -40px;
   }
 }
