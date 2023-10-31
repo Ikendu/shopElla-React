@@ -44,6 +44,7 @@
 .item button:hover {
   color: #77f480;
   border-radius: 12px;
+  cursor: pointer;
 }
 .list .item .adderBtn {
   width: 46%;

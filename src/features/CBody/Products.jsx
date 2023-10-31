@@ -10,6 +10,7 @@ import {
   increaseBtn,
   productAdd,
   reduceBtn,
+  removeItem,
 } from '../../STORE/reducers/cartRedecer'
 
 const Products = () => {
@@ -68,6 +69,7 @@ const Display = ({ image, name, price, id, added, count }) => {
           </button>
           <button
             onClick={() => {
+              if (count == 1) return
               dispatch(decreaseBtn(id))
               dispatch(reduceBtn(id))
             }}
