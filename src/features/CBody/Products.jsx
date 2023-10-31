@@ -10,7 +10,6 @@ import {
   increaseBtn,
   productAdd,
   reduceBtn,
-  removeItem,
 } from '../../STORE/reducers/cartRedecer'
 
 const Products = () => {
@@ -32,7 +31,6 @@ const Products = () => {
 
 const Display = ({ image, name, price, id, added, count }) => {
   const dispatch = useDispatch()
-  const { sales } = useSelector((state) => state.cart)
 
   return (
     <div className='item' key={id}>
