@@ -43,7 +43,17 @@
 }
 .item button:hover {
   color: #77f480;
-  border-radius: 16px;
+  border-radius: 12px;
+}
+.list .item .adderBtn {
+  width: 46%;
+}
+.list .item .plus {
+  width: 17%;
+}
+.item .adderBtn:hover {
+  color: #77f480;
+  border-radius: 0px;
 }
 button:active,
 button:focus {

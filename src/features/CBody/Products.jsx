@@ -2,7 +2,7 @@ import './body.css'
 
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import { addItems, addToCart, productAdd } from '../../STORE/reducers/cartRedecer'
+import { addItems, addToCart, increaseBtn, productAdd } from '../../STORE/reducers/cartRedecer'
 
 const Products = () => {
   const { products } = useSelector((state) => state.cart)
@@ -21,8 +21,9 @@ const Products = () => {
   )
 }
 
-const Display = ({ image, name, price, id, add, added }) => {
+const Display = ({ image, name, price, id, added, count }) => {
   const dispatch = useDispatch()
+  const { sales } = useSelector((state) => state.cart)
 
   return (
     <div className='item' key={id}>
@@ -39,13 +40,20 @@ const Display = ({ image, name, price, id, add, added }) => {
           <span>Add to Cart</span>
         </button>
       ) : (
-        <button
-          onClick={() => {
-            dispatch(addToCart({ id }))
-          }}
-        >
-          Added
-        </button>
+        <>
+          <button onClick={() => dispatch(increaseBtn(id))} className='plus'>
+            +
+          </button>
+          <button
+            className='adderBtn'
+            onClick={() => {
+              dispatch(addToCart({ id }))
+            }}
+          >
+            {count}
+          </button>
+          <button className='plus'>-</button>
+        </>
       )}
     </div>
   )
