@@ -64,10 +64,12 @@ const cartReducer = createSlice({
       let cartItem = state.products.find((prod) => prod.id === payload.id)
       cartItem.added = false
     },
+    //increase the qunatity from the main page
     addBtn: (state, { payload }) => {
       let cartItem = state.products.find((prod) => prod.id === payload)
       cartItem.count = cartItem.count + 1
     },
+    //decrease the quantity from the main page
     reduceBtn: (state, { payload }) => {
       let cartItem = state.products.find((prod) => prod.id === payload)
       cartItem.count = cartItem.count - 1
