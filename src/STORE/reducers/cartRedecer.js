@@ -64,6 +64,14 @@ const cartReducer = createSlice({
       let cartItem = state.products.find((prod) => prod.id === payload.id)
       cartItem.added = false
     },
+    addBtn: (state, { payload }) => {
+      let cartItem = state.products.find((prod) => prod.id === payload)
+      cartItem.count = cartItem.count + 1
+    },
+    reduceBtn: (state, { payload }) => {
+      let cartItem = state.products.find((prod) => prod.id === payload)
+      cartItem.count = cartItem.count - 1
+    },
   },
 })
 
@@ -77,6 +85,8 @@ export const {
   calculate,
   productAdd,
   addToCart,
+  addBtn,
+  reduceBtn,
 } = cartReducer.actions
 
 export default cartReducer.reducer

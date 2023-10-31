@@ -3,10 +3,12 @@ import { CartIcon } from '../ICON/CartIcon'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import {
+  addBtn,
   closeCart,
   decreaseBtn,
   increaseBtn,
   openCart,
+  reduceBtn,
   removeItem,
 } from '../../STORE/reducers/cartRedecer'
 import { openModel } from '../../STORE/reducers/modalReducer'
@@ -44,12 +46,22 @@ const Card = () => {
                   </div>
                 </div>
                 <div className='counter'>
-                  <button onClick={() => dispatch(increaseBtn(id))}>+</button>
+                  <button
+                    onClick={() => {
+                      dispatch(increaseBtn(id))
+                      dispatch(addBtn(id))
+                    }}
+                  >
+                    +
+                  </button>
                   <p>{count}</p>
                   <button
                     onClick={() => {
                       if (count == 1) dispatch(removeItem(id))
-                      else dispatch(decreaseBtn(id))
+                      else {
+                        dispatch(decreaseBtn(id))
+                        dispatch(reduceBtn(id))
+                      }
                     }}
                   >
                     -
