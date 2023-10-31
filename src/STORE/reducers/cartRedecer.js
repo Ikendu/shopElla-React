@@ -46,6 +46,7 @@ const cartReducer = createSlice({
       cartItem.count = cartItem.count - 1
     },
 
+    //calculating the total price and increasing the quantity generally
     calculate: (state) => {
       let counts = 0
       let total = 0
@@ -56,19 +57,25 @@ const cartReducer = createSlice({
       state.counter = counts
       state.total = total
     },
+
+    //contolling the main page add functionality
     productAdd: (state, { payload }) => {
       let cartItem = state.products.find((prod) => prod.id === payload.id)
       cartItem.added = true
     },
+
+    //contolling the main page add functionality
     addToCart: (state, { payload }) => {
       let cartItem = state.products.find((prod) => prod.id === payload.id)
       cartItem.added = false
     },
+
     //increase the qunatity from the main page
     addBtn: (state, { payload }) => {
       let cartItem = state.products.find((prod) => prod.id === payload)
       cartItem.count = cartItem.count + 1
     },
+
     //decrease the quantity from the main page
     reduceBtn: (state, { payload }) => {
       let cartItem = state.products.find((prod) => prod.id === payload)
