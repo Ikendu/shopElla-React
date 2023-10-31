@@ -17,6 +17,7 @@ export let items = [
     image: aa,
     price: 8000,
     count: 1,
+    add: ``,
   },
   {
     id: 2,
@@ -24,6 +25,8 @@ export let items = [
     image: a,
     price: 7500,
     count: 1,
+    add: ``,
+    added: false,
   },
   {
     id: 3,
@@ -31,6 +34,8 @@ export let items = [
     image: b,
     price: 4500,
     count: 1,
+    add: ``,
+    added: false,
   },
   {
     id: 4,
@@ -38,6 +43,8 @@ export let items = [
     image: c,
     price: 6850,
     count: 1,
+    add: ``,
+    added: false,
   },
   {
     id: 5,
@@ -45,6 +52,8 @@ export let items = [
     image: d,
     price: 3500,
     count: 1,
+    add: ``,
+    added: false,
   },
   {
     id: 6,
@@ -52,6 +61,8 @@ export let items = [
     image: e,
     price: 3500,
     count: 1,
+    add: ``,
+    added: false,
   },
   {
     id: 7,
@@ -59,6 +70,8 @@ export let items = [
     image: f,
     price: 4000,
     count: 1,
+    add: ``,
+    added: false,
   },
   {
     id: 8,
@@ -66,6 +79,8 @@ export let items = [
     image: g,
     price: 10000,
     count: 1,
+    add: ``,
+    added: false,
   },
   {
     id: 9,
@@ -73,6 +88,8 @@ export let items = [
     image: h,
     price: 6000,
     count: 1,
+    add: ``,
+    added: false,
   },
   {
     id: 10,
@@ -80,6 +97,8 @@ export let items = [
     image: i,
     price: 6000,
     count: 1,
+    add: ``,
+    added: false,
   },
   {
     id: 11,
@@ -87,6 +106,8 @@ export let items = [
     image: j,
     price: 10000,
     count: 1,
+    add: ``,
+    added: false,
   },
   {
     id: 12,
@@ -94,5 +115,7 @@ export let items = [
     image: k,
     price: 6500,
     count: 1,
+    add: ``,
+    added: false,
   },
 ]

@@ -8,6 +8,7 @@ const initialState = {
   counter: 0,
   isOpen: false,
   isLoading: true,
+  add: `Item Added to Cart`,
 }
 
 const cartReducer = createSlice({
@@ -55,10 +56,27 @@ const cartReducer = createSlice({
       state.counter = counts
       state.total = total
     },
+    productAdd: (state, { payload }) => {
+      let cartItem = state.products.find((prod) => prod.id === payload.id)
+      cartItem.added = true
+    },
+    addToCart: (state, { payload }) => {
+      let cartItem = state.products.find((prod) => prod.id === payload.id)
+      cartItem.added = false
+    },
   },
 })
 
-export const { openCart, closeCart, addItems, removeItem, increaseBtn, decreaseBtn, calculate } =
-  cartReducer.actions
+export const {
+  openCart,
+  closeCart,
+  addItems,
+  removeItem,
+  increaseBtn,
+  decreaseBtn,
+  calculate,
+  productAdd,
+  addToCart,
+} = cartReducer.actions
 
 export default cartReducer.reducer
