@@ -24,13 +24,13 @@ const Payment = () => {
                 <td>{item.name}</td>
                 <td> {item.price}</td>
                 <td>{item.count}</td>
-                <td> {item.price * item.count}</td>
+                <td> {(item.price * item.count).toLocaleString()}</td>
               </tr>
             ))}
           </table>
           <div className='heading-item'></div>
         </div>
-        <h3 className='price'>Total Amount: {total}</h3>
+        <h3 className='price'>Total Amount: N{total.toLocaleString()}</h3>
 
         <h2>Payment Details</h2>
         <div className='account'>

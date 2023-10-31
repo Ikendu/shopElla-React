@@ -116,6 +116,20 @@ button {
 }
 @media screen and (max-width: 600px) {
   .shopping svg {
+    width: 40px;
+  }
+  .card-shopping {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .shopping svg {
     width: 30px;
+  }
+  .card-shopping {
+    width: 340px;
+  }
+  .details {
+    padding-left: 35px;
   }
 }
